@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pages{
+  padding-top: 130px;
+  min-height: 100vh;
+}
+
+/* Banner */
+.discount-banner{
+  width: 100%;
+  height: 180px;
+}
+.main-banner{
+  width: 100%;
+  height: 550%;
+}
+.sale-banner{
+  margin-top: 17px;
+}
+.discount-banner img,
+.main-banner img,
+.sale-banner img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Home Page */
+.clothings, .wedding-guest {
+  margin-top: 50px;
+}
+.clothings img,
+.wedding-guest img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Shop Page */
+.products{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0 18px;
+  margin-top: 30px;
+}
+.product{
+  text-align: center;
+}
+.product .image{
+  width: 97%;
+  height: 450px;
+  margin: 0 auto;
+}
+.product .image img{
+  width: 100%;
+  height: 93%;
+}
+.product .image .link{
+  text-decoration: none;
+  color: black;
+}
+.product .image p{
+  font-size: 13.5px;
+  font-weight: 550;
+  margin-top: 10px;
+}
+.product .des{
+  line-height: 4;
+}
+.product .price{
+  color: rgb(239, 37, 54);
+  font-size: 13px;
+}
+.product .price .cross{
+  color: black;
+  text-decoration: line-through;
+} 
+.product-color img:hover{
+  border: 1px solid black;
+}
+.more-products{
+  text-align: center;
+  margin: 10px 0;
+}
+.more-products button{
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

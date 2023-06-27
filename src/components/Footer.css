@@ -1,0 +1,98 @@
+/* Footer */
+.payment-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: black;
+}
+.help .footer-link:hover,
+.about .footer-link:hover{
+    text-decoration: underline;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.footer-content h5{
+    margin-bottom: 20px;
+}
+.footer-content ul {
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    line-height: 2;
+}
+.footer-content .quick-links, .footer-content .help{
+    width: 60%;
+    border-right: 1px solid whitesmoke;
+    margin-right: 6px;
+}
+.gap{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid whitesmoke;   
+    background-color: whitesmoke;
+    margin: 5px 0;
+    padding: 4px 5px;
+}
+.country{
+    margin-top: 30px;
+}
+select{
+    width: 80%;
+    padding: 10px 0;
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+}
+.subscribe{
+    border-left: 1px solid whitesmoke;
+    padding-left: 6px;
+}
+.subscribe .cookie, .copyright .terms{
+    text-decoration: underline;
+}
+.subscribe .email-us{
+    display: flex;
+    margin: 30px 0;
+}
+.email-us button{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.subscribe .check{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 3px;
+}
+.subscribe .extra{
+    font-size: 14px;
+    margin: 20px 0;
+}
+.follow-us .socials{
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+.follow-us .download{
+    display: flex;
+    gap: 6px;
+}
+.copyright{
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid gainsboro;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 7px rgba(195, 195, 194, 5);
+}
