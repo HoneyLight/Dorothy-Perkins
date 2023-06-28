@@ -10,16 +10,16 @@
 }
 .nav1 div{
     width: 100%;
-    padding: 10px 15px 4px 15px;
+    padding: 2px 39px 3px 39px;
 }
 .nav1 .nav1-color1{
-    background-color: rgb(55, 39, 39);
+    background-color: rgb(54, 54, 54);
 }
 .nav1 .nav1-color2{
-    background-color: black;
+    background-color: rgb(68, 68, 68);
 }
 .nav1 .nav1-color3{
-    background-color: rgb(71, 66, 66);
+    background-color: rgb(54, 54, 54);
 }
 .nav1 .link{
     text-decoration: none;

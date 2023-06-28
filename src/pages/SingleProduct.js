@@ -1,6 +1,7 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { IoReloadOutline, IoCalendarOutline } from "react-icons/io5";
 import img1 from "../components/images/womens-pink-petite-v-neck-broderie-sleeve-top.webp";
 import img2 from "../components/images/pink-petite-v-neck-broderie-sleeve-top.webp";
 import img3 from "../components/images/pink-petite-v-neck-broderie-sleeve-top (1).webp";
@@ -20,89 +21,97 @@ function SingleProduct() {
             <div className="pages">
                 <div className="single-product">
                     <div className="wears">
-                        <img src={img1} alt="" />
-                        <img src={img2} alt="" />
-                        <img src={img3} alt="" />
+                        <div>
+                            <img src={img1} alt="" />
+                        </div>
+                        <div><img src={img2} alt="" /></div>
+                        <div><img src={img3} alt="" /></div>
                     </div>
-                    <div className="product-details">
-                        <div className="free">
-                            <p>FREE STANDARD DELIVERY WHEN YOU SPEND £50!</p>
-                            <p><Link>Home</Link> / <Link>Clothing</Link> / <Link>Women's Tops</Link> / <Link>Blouses</Link> / Petite V Neck Broderie Sleeve Top</p>
-                        </div>
-                        <div className="details">
-                            <h4>Petite V Neck Broderie Sleeve Top</h4>
-                            <p>£12.00 (40% OFF) <span>£20.00</span></p>
-                            <img src={img5} alt="" />
-                            <div className="size">
-                                <button>XS</button>
-                                <button>S</button>
-                                <button>M</button>
-                                <button>L</button>
+                    <div className="product-des">
+                        <div className="product-details">
+                            <div className="free">
+                                <p className="red"><b>FREE STANDARD DELIVERY WHEN YOU SPEND £50!</b></p>
+                                <p className="brand"><Link className="brand-link">Home / </Link><Link className="brand-link">Clothing / </Link><Link className="brand-link">Women's Tops / </Link><Link className="brand-link">Blouses / </Link>Petite V Neck Broderie Sleeve Top</p>
                             </div>
-                            <p><Link>Size guide</Link></p>
-                        </div>
-                        <div className="buy">
-                            <button>SELECT SIZE</button>
-                        </div>
-                        <div className="save">
-                            <Link><button>See similar</button></Link>
-                            <Link><button>Save for later</button></Link>
-                        </div>
-                        <div className="dp-free">
-                            <img src={img4} alt="" />
-                        </div>
-                        <div className="payment-plan">
-                            <p>Pay £6.67 in 3 installments with <strong>Klarna.</strong> <Link>More info</Link></p>
-                            <p>Pay £5.00 in 4 installments with <strong>clearpay</strong> <Link>More info</Link></p>
-                            <p>Pay in 3 interest-free payments on eligible purchases. <strong>Paypal</strong> <Link>More info</Link></p>
-                        </div>
-                        <div className="styles">
-                            <p>Cami or blouse? Shirt or bodysuit? Whatever you're after, our women's tops have you covered for every event in the social calendar. From casual fits to elevated styles for special occasions, we make it easy to nail the 'jeans and a nice top' look. Think puff sleeves, pretty prints, wrap silhouettes and so much more.</p>
-                            <ul className="desc">
-                                <li>Style: Petite V Neck Broderie Sleeve Top.</li>
-                                <li>Ideal for: Daywear.</li>
-                                <li>Design: Embroidered.</li>
-                                <li>Model wears size UK 10 and is 5' 3" tall.</li>
-                            </ul>
-                            <p><strong>Make-up & Fragrance:</strong> Primer (Yves Saint Laurent, Touche Eclat Blur Primer 30ml), Foundation (Estée Lauder, Double Wear Stay in Place Foundation SPF10), Bronzer (Benefit, Hoola Matte Powder Bronzer), Blusher (Benefit, Wanderful World Blushes Starlaa Rosy Bronze Powder Blusher), Setting Spray (Urban Decay, All Nighter Setting Spray 118ml), Fragrance (Ghost The Fragrance Eau De Toilette).</p>
-                            <p>100% cotton. Wash at 40, do not tumble dry.</p>
-                            <p>SKU: #BQQ10572</p>
-                        </div>
-                        <div className="delivery">
-                            <h4>Delivery & Returns</h4>
-                            <p>FREE DELIVERY ON ALL ORDERS WHEN YOU SPEND £50</p>
-                            <div className="return">
-                                <p>Returns are free for DP Unlimited customers</p>
-                                <p>Not happy? You have 28 days to return</p>
-                                <p>Click <Link><strong>here</strong></Link> for our full returns policy.</p>
+                            <div className="details">
+                                <h4>Petite V Neck Broderie Sleeve Top</h4>
+                                <p className="red">£12.00 (40% OFF) <span className="cross">£20.00</span></p>
+                                <img className="prd-color" src={img5} alt="" />
+                                <div className="size">
+                                    <div><button>XS</button></div>
+                                    <div><button>S</button></div>
+                                    <div><button>M</button></div>
+                                    <div><button>L</button></div>
+                                </div>
+                                <p><Link className="size-link">Size guide</Link></p>
                             </div>
-                        </div>
-                        <div className="delivery-cost">
-                            <div className="standard">
+                            <div className="buy">
+                                <button>SELECT SIZE</button>
+                            </div>
+                            <div className="save">
                                 <div>
+                                <Link><button>See similar</button></Link>
+                                </div>
+                                <div>
+                                <Link><button>Save for later</button></Link>
+                                </div>
+                            </div>
+                            <div className="dp-free">
+                                <img src={img4} alt="" />
+                            </div>
+                            <div className="payment-plan">
+                                <p>Pay <b>£6.67</b> in 3 installments with <strong>Klarna.</strong> <Link className="plan-link">More info</Link></p>
+                                <p>Pay <b>£5.00</b> in 4 installments with <strong>clearpay</strong> <Link className="plan-link">More info</Link></p>
+                                <p>Pay in 3 interest-free payments on eligible purchases. <strong>Paypal</strong> <Link className="plan-link">More info</Link></p>
+                            </div>
+                            <div className="styles">
+                                <p className="cami">Cami or blouse? Shirt or bodysuit? Whatever you're after, our women's tops have you covered for every event in the social calendar. From casual fits to elevated styles for special occasions, we make it easy to nail the 'jeans and a nice top' look. Think puff sleeves, pretty prints, wrap silhouettes and so much more.</p>
+                                <ul className="desc">
+                                    <li>Style: Petite V Neck Broderie Sleeve Top.</li>
+                                    <li>Ideal for: Daywear.</li>
+                                    <li>Design: Embroidered.</li>
+                                    <li>Model wears size UK 10 and is 5' 3" tall.</li>
+                                </ul>
+                                <p><strong>Make-up & Fragrance:</strong> Primer (Yves Saint Laurent, Touche Eclat Blur Primer 30ml), Foundation (Estée Lauder, Double Wear Stay in Place Foundation SPF10), Bronzer (Benefit, Hoola Matte Powder Bronzer), Blusher (Benefit, Wanderful World Blushes Starlaa Rosy Bronze Powder Blusher), Setting Spray (Urban Decay, All Nighter Setting Spray 118ml), Fragrance (Ghost The Fragrance Eau De Toilette).</p>
+                                <p className="wash">100% cotton. Wash at 40, do not tumble dry.</p>
+                                <p className="code">SKU: #BQQ10572</p>
+                            </div>
+                            <div className="delivery">
+                                <h4>Delivery & Returns</h4>
+                                <p className="free-delivery">FREE DELIVERY ON ALL ORDERS WHEN YOU SPEND £50</p>
+                                <div className="return">
+                                    <p>Returns are free for DP Unlimited customers</p>
+                                    <p>Not happy? You have 28 days to return</p>
+                                    <p>Click <Link className="here"><strong>here</strong></Link> for our full returns policy.</p>
+                                </div>
+                            </div>
+                            <div className="delivery-cost">
+                                <div className="standard">
+                                    <div className="std-con">
+                                        <div>
+                                            <p><strong>UK Standard Delivery</strong></p>
+                                            <p>Up to 4 working days (Delivery days Monday to Saturday)</p>
+                                        </div>
+                                        <div>
+                                            <p><strong>£3.99</strong></p>
+                                        </div>
+                                    </div>
+                                    <div className="spend">
+                                        <p><strong>FREE WHEN YOU SPEND £50!</strong></p>
+                                    </div>
+                                </div>
+                                <div className="next-day">
                                     <div>
-                                        <p><strong>UK Standard Delivery</strong></p>
-                                        <p>Up to 4 working days (Delivery days Monday to Saturday)</p>
+                                        <p><strong>UK Next Day Delivery</strong></p>
+                                        <p>Order before 10pm Monday to Sunday to receive your order next day</p>
                                     </div>
                                     <div>
-                                        <p><strong>£3.99</strong></p>
+                                        <p><strong>£5.99</strong></p>
                                     </div>
                                 </div>
-                                <div>
-                                    <p><strong>FREE WHEN YOU SPEND £50!</strong></p>
-                                </div>
                             </div>
-                            <div className="next-day">
-                                <div>
-                                    <p><strong>UK Next Day Delivery</strong></p>
-                                    <p>Order before 10pm Monday to Sunday to receive your order next day</p>
-                                </div>
-                                <div>
-                                    <p><strong>£5.99</strong></p>
-                                </div>
-                            </div>
+                            <p className="view-all"><Link className="view-link">View all delivery options</Link></p>
                         </div>
-                        <p><Link>View all delivery options</Link></p>
                     </div>
                 </div>
                 <div className="also-like">

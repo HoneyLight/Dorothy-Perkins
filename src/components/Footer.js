@@ -6,6 +6,7 @@ import img3 from "./images/vector11.svg";
 import img4 from "./images/vector10.svg";
 import img5 from "./images/vector9.svg";
 import img6 from "./images/vector8.svg";
+// import { LiaCopyright } from "react-icons/lia";
 import { Link } from "react-router-dom";
 
 function Footer() {

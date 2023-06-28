@@ -59,7 +59,7 @@ function Navigation() {
                             </Link>
                         </li>
                         <li className='list'>
-                            <Link to="/classcomp" className='nav-link'>
+                            <Link to="/signup" className='nav-link'>
                                 <img src={img3} alt="" />
                             </Link>
                         </li>
@@ -69,7 +69,7 @@ function Navigation() {
                             </Link>
                         </li>
                         <li className='list'>
-                            <Link to="/classcomp" className='nav-link'>
+                            <Link to="/cart" className='nav-link'>
                                 <img src={img5} alt="" />
                             </Link>
                         </li>
