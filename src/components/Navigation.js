@@ -13,13 +13,13 @@ function Navigation() {
         <header className='navigation'>
             <div className="nav1">
                 <div className="nav1-color1">
-                    <div className='nav1-content1'><Link className='link'>THE HOLIDAY SHOP UP TO 40% 0FF</Link></div>
+                    <div className='nav1-content'><Link className='link'>THE HOLIDAY SHOP UP TO 40% 0FF</Link></div>
                 </div>
                 <div className="nav1-color2">
-                    <div className='nav1-content2'><Link className='link'>THE HOLIDAY SHOP UP TO 40% 0FF</Link></div>
+                    <div className='nav1-content'><Link className='link'>THE HOLIDAY SHOP UP TO 40% 0FF</Link></div>
                 </div>
                 <div className="nav1-color3">
-                    <div className='nav1-content3'><Link className='link'>GET UNLIMITED NEXT DAY DELIVERY + FREE RETURNS FOR £6.99 WAS <span>£9.99</span></Link></div>
+                    <div className='nav1-content'><Link className='link'>GET UNLIMITED NEXT DAY DELIVERY + FREE RETURNS FOR £6.99 WAS <span>£9.99</span></Link></div>
                 </div>
             </div>
             <div className="nav2">
@@ -27,16 +27,16 @@ function Navigation() {
                 <div>
                     <ul>
                         <li className='list'>
-                            <Link to="/" className='nav-link'>NEW IN</Link>
+                            <Link to="/" className='nav-link hide'>NEW IN</Link>
                         </li>
                         <li className='list'>
-                            <Link to="/about" className='nav-link'>CLOTHING</Link>
+                            <Link to="/about" className='nav-link hide'>CLOTHING</Link>
                         </li>
                         <li className='list'>
-                            <Link to="/menu" className='nav-link'>DRESSES</Link>
+                            <Link to="/menu" className='nav-link hide'>DRESSES</Link>
                         </li>
                         <li className='list'>
-                            <Link to="/contact" className='nav-link'>SHOES</Link>
+                            <Link to="/contact" className='nav-link hide'>SHOES</Link>
                         </li>
                         <li className='Logo'>
                             <div className='logo'>
@@ -44,10 +44,10 @@ function Navigation() {
                             </div>
                         </li>
                         <li className='list'>
-                            <Link to="/classcomp" className='nav-link'>SUMMER CLOTHES</Link>
+                            <Link to="/classcomp" className='nav-link hide'>SUMMER CLOTHES</Link>
                         </li>
                         <li className='list'>
-                            <Link to="/cart" className='nav-link'>SALE</Link>
+                            <Link to="/cart" className='nav-link hide'>SALE</Link>
                         </li>
                     </ul>
                 </div>

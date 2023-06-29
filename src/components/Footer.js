@@ -81,7 +81,7 @@ function Footer() {
                     <h4>EXTRA 15% OFF EVERYTHING!*</h4>
                     <li><h5>Subscribe to get exclusive offers and inside info.</h5></li>
                     <li className='email-us'>
-                        <textarea name="" id="" cols="30" rows="2">Enter your email</textarea>
+                        <textarea name="" id="" cols="30" rows="2" placeholder='Enter your email'></textarea>
                         <button>SUBSCRIBE</button>
                     </li>
                     <li className='check'>

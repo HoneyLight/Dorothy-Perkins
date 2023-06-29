@@ -10,16 +10,16 @@ function Home() {
         <div>
             <Navigation />
             <div className="pages">
-            <Banner />
+                <Banner />
                 <div className="clothings">
-                    <Link>
+                    {/* <Link>
                         <img src={img1} alt="clothing" />
-                    </Link>
+                    </Link> */}
                 </div>
                 <div className="wedding-guest">
-                    <Link>
+                    {/* <Link>
                         <img src={img2} alt="wedding-guest" />
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
             <Footer />

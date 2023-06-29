@@ -22,43 +22,50 @@ function Cart() {
                     <div className="cart-container">
                         <div className="cart-content">
                             <div className="cart-con">
-                                <div><img src={img1} alt="" /></div>
+                                <div className="image"><img src={img1} alt="" /></div>
                                 <div className="cart-desc">
-                                    <p>40% OFF</p>
-                                    <div>
-                                        <h5><Link>Petite V Neck Broderie Sleeve Top</Link></h5>
-                                        <p><Link>×</Link></p>
+                                    <div className="cart-dis">
+                                        <p className="red">40% OFF</p>
                                     </div>
-                                    <p>Colour: <b>pink,</b> Size: <b>XS</b></p>
                                     <div>
+                                        <h5><Link className="cart-link">Petite V Neck Broderie Sleeve Top</Link></h5>
+                                        <p><Link className="cart-link remove">X</Link></p>
+                                    </div>
+                                    <p className="cart-col">Colour: <b>pink,</b> Size: <b>XS</b></p>
+                                    <div className="prd-qty">
                                         <p>QTY: <b>1</b></p>
                                         <p className="stock">In stock</p>
                                     </div>
                                     <div className="edit">
-                                        <Link>Edit</Link>
+                                        <Link className="edit-link"><b>Edit</b></Link>
                                         <p className="red">£12.00 <span className="cross">£20.00</span></p>
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div className="cart-content_rtn">
+                                <p><IoReloadOutline className="reload-icon" /></p>
                                 <p>FREE RETURNS FOR ALL DP UNLIMITED CUSTOMERS</p>
                             </div>
-                            <div>
+                            <div className="unlimited">
                                 <div>
-                                    <img src="" alt="" />
+                                    <p><SlStar className="star-icon" /></p>
                                 </div>
                                 <div>
-                                    <h5>Free Next Day Delivery</h5>
-                                    <p>for 1 year with Dorothy Perkins Unlimited</p>
-                                    <p>£9.99  <span>£6.99</span></p>
-                                    <p><b>GET UNLIMITED</b> <span></span></p>
+                                    <div className="one-year">
+                                        <h4>Free Next Day Delivery</h4>
+                                        <p>for 1 year with Dorothy Perkins Unlimited</p>
+                                        <p className="red">£6.99  <span className="cross">£9.99</span></p>
+                                    </div>
+                                    <div className="get-unlimited">
+                                        <p><b>GET UNLIMITED</b> <span></span></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="cart-total">
-                            <div>
-                                <h4>Order Summary</h4>
-                                <div>
+                            <div className="cart-summary">
+                                <h3>Order Summary</h3>
+                                <div className="your-cart">
                                     <div><p>Your cart</p></div>
                                     <div>
                                         <p>£55.00</p>
@@ -66,26 +73,26 @@ function Cart() {
                                         <p><b>-£10.50</b></p>
                                     </div>
                                 </div>
-                                <div>
+                                <div className="order-total">
                                     <div><p><b>Order total (excluding delivery)</b></p></div>
                                     <div><p><b>£36.50</b></p></div>
                                 </div>
-                                <p>*All taxes are included in product prices</p>
-                                <button>CHECKOUT</button>
-                                <p>OR, Checkout with</p>
-                                <button><img src="" alt="" /></button>
-                                <button><b>Klarna.</b> Express Checkout</button>
+                                <p className="taxes">*All taxes are included in product prices</p>
+                                <button className="checkout-btn">CHECKOUT</button>
+                                <p className="taxes">OR, Checkout with</p>
+                                <button className="paypal-btn"><img src={img2} alt="" /></button>
+                                <button className="klarna-btn"><b>Klarna.</b> Express Checkout</button>
                             </div>
-                            <div>
+                            <div className="pay-gateway">
                                 <p>Pay £12.17 in 3 installments with <b>Klarna.</b></p>
                                 <p>Pay £9.13 in 4 installments with <b>clearpay</b></p>
                                 <p>Pay in 3 interest-free payments on eligible purchases.</p>
                             </div>
                             <div className="promo-code">
                                 <p><b>Have a promo code?</b></p>
-                                <h6>Promo code</h6>
-                                <div>
-                                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                                <h5>Promo code</h5>
+                                <div className="promo-apply">
+                                    <textarea name="" id="" cols="30" rows="2"></textarea>
                                     <button><b>APPLY</b></button>
                                 </div>
                             </div>

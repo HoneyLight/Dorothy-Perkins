@@ -11,14 +11,14 @@ function Banner() {
                 <img src={img1} alt="discount" />
             </div>
             <div className="main-banner">
-                <Link>
+                {/* <Link to="./shop">
                     <img src={img2} alt="main" />
-                </Link>
+                </Link> */}
             </div>
             <div className="sale-banner">
-                <Link>
+                {/* <Link>
                     <img src={img3} alt="" />                
-                </Link>
+                </Link> */}
             </div>
         </div>
     )

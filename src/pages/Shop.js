@@ -88,14 +88,561 @@ function Shop() {
         <div>
             <Navigation />
             <div className="pages">
-                <div className="up">
-                    <div></div>
-                    <div></div>
+                <div className="shop-all">
+                    <div>
+                        <p className="shop-all-pay"><Link className="shop-all-link">Home / </Link><Link className="shop-all-link">Promotion/ </Link>PAYDAY 25% OFF ALMOST EVERYTHING</p>
+                    </div>
+                    <div className="payday">
+                        <h3>PAYDAY 25% OFF ALMOST EVERYTHING</h3>
+                    </div>
+                </div>
+                <div className="shop-varieties">
+                    <div className="accordion-container">
+                        <div className="accordion-tab">
+                            <input type="checkbox" name="toggle" id="accordion-1" />
+                            <label htmlFor="accordion-1">Category</label>
+                            <div className="accordion-content">
+                                <ul>
+                                    <li className="aaa">
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" className="bigbox" />
+                                        </Link>
+                                        <Link>
+                                            Accesories
+                                        </Link>
+                                    </li>
+                                    <li className="aaa">
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>
+                                            Beach Wear
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Boots</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Denim</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Coats & Jackets</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Joggers</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers and Cardigans</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpsuits</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Nightwear</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Trouser</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Skirts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Swimwear</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="accordion-tab">
+                            <input type="checkbox" name="toggle" id="accordion-1" />
+                            <label htmlFor="accordion-1">Size</label>
+                            <div className="accordion-content">
+                                <ul>
+                                    <li className="aaa">
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" className="bigbox" />
+                                        </Link>
+                                        <Link>
+                                            Accesories
+                                        </Link>
+                                    </li>
+                                    <li className="aaa">
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>
+                                            Beach Wear
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Boots</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Denim</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Coats & Jackets</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Joggers</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers and Cardigans</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpsuits</Link>
+                                    </li>
+                                    <li>
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Nightwear</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Trouser</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Skirts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Swimwear</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="accordion-tab">
+                            <input type="checkbox" name="toggle" id="accordion-1" />
+                            <label htmlFor="accordion-1">Shop by Body Fit</label>
+                            <div className="accordion-content">
+                                <ul>
+                                    <li className="aaa">
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>
+                                            Accesories
+                                        </Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Beach Wear</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Boots</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Denim</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Coats & Jackets</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Joggers</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers and Cardigans</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpsuits</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Nightwear</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Trouser</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Skirts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Swimwear</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="accordion-tab">
+                            <input type="checkbox" name="toggle" id="accordion-1" />
+                            <label htmlFor="accordion-1">Colour</label>
+                            <div className="accordion-content">
+                                <ul>
+                                    <li className="aaa">
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>
+                                            Accesories
+                                        </Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Beach Wear</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Boots</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Denim</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Coats & Jackets</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Joggers</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers and Cardigans</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpsuits</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Nightwear</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Trouser</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Skirts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Swimwear</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="accordion-tab">
+                            <input type="checkbox" name="toggle" id="accordion-1" />
+                            <label htmlFor="accordion-1">Style</label>
+                            <div className="accordion-content">
+                                <ul>
+                                    <li className="aaa">
+                                        <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>
+                                            Accesories
+                                        </Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Beach Wear</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Boots</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Denim</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Coats & Jackets</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Joggers</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers and Cardigans</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpers</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Jumpsuits</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Nightwear</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Trouser</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Shorts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Skirts</Link>
+                                    </li>
+                                    <li>
+                                    <Link>
+                                            <input type="checkbox" name="" id="big-box" />
+                                        </Link>
+                                        <Link>Swimwear</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="shop-view">
+                        <p><b>View: </b></p>
+                        <div><button className="active">5</button></div>
+                        <div><button>4</button></div>
+                        <div><button>3</button></div>
+                        <div>
+                            <select name="" id="">
+                                <option value="" placeholder="Sort"></option>
+                                <option value="Best March">Best March</option>
+                                <option value="Newest In">Newest In</option>
+                                <option value="Price (Low to High)">Price (Low to High)</option>
+                                <option value="Price (High to Low)">Price (High to Low)</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div className="products">
                     <div className="product">
                         <div className="image">
-                            <Link className="link">
+                            <Link to="/product" className="link">
                                 <img src={img1} alt="" />
                                 <p>Petite V Neck Broderie Sleeve Top</p>
                             </Link>
@@ -896,8 +1443,9 @@ function Shop() {
                     </div>
                 </div>
                 <div className="more-products">
+                    <p>Showing <b>80</b> of <b>2,066</b> products</p>
                     <Link>
-                        <button>VIEW MORE</button>
+                        <button>LOAD MORE</button>
                     </Link>
                 </div>
             </div>
