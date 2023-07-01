@@ -96,3 +96,55 @@ select{
     background-color: whitesmoke;
     box-shadow: 2px 2px 7px rgba(195, 195, 194, 5);
 }
+/* .help .footer-link{
+    display: none;
+} */
+#footer{
+    display: block;
+}
+@media(max-width: 1000px) {
+    .payment-strip img{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .footer-content{
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+    }
+    .gap, select{
+        width: 100%;
+    }
+    .footer-content h5{
+        margin-bottom: 10px;
+    }
+    .footer-content .subscribe{
+        text-align: center;
+        border: none;
+    }
+    .footer-content .quick-links, .footer-content .help{
+        border: none;
+        width: 100%;
+        margin: 30px 0;
+    }
+    .email-us, .check{
+        justify-content: center;
+    }
+    .follow-us .socials{
+        justify-content: center;
+    }
+    .follow-us .download{
+        justify-content: center;
+    }
+    .copyright{
+        padding: 10px 10px;
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 13px;
+    }
+    #footer:checked ~ .help.footer-link{
+        display: block;
+  box-shadow: 5px 5px 10px whitesmoke;
+}
+}

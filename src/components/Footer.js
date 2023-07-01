@@ -52,7 +52,12 @@ function Footer() {
                     </li>
                 </ul>
                 <ul className="help">
-                    <li><h5>Help & Information</h5></li>
+                    <li>
+                        <h5>
+                            Help & Information
+                        </h5>
+                        <input type="checkbox" name="toggle" id="footer" />
+                    </li>
                     <li><Link className='footer-link'>Help</Link></li>
                     <li><Link className='footer-link'>Returns</Link></li>
                     <li><Link className='footer-link'>Delivery Info</Link></li>

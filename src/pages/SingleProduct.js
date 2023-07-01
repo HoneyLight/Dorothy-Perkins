@@ -24,8 +24,8 @@ function SingleProduct() {
                         <div>
                             <img src={img1} alt="" />
                         </div>
-                        <div><img src={img2} alt="" /></div>
-                        <div><img src={img3} alt="" /></div>
+                        <div className="hide"><img src={img2} alt="" /></div>
+                        <div className="hide"><img src={img3} alt="" /></div>
                     </div>
                     <div className="product-des">
                         <div className="product-details">
@@ -78,14 +78,14 @@ function SingleProduct() {
                             </div>
                             <div className="delivery">
                                 <h4>Delivery & Returns</h4>
-                                <p className="free-delivery">FREE DELIVERY ON ALL ORDERS WHEN YOU SPEND £50</p>
-                                <div className="return">
+                                <p className="free-delivery hide">FREE DELIVERY ON ALL ORDERS WHEN YOU SPEND £50</p>
+                                <div className="return hide">
                                     <p>Returns are free for DP Unlimited customers</p>
                                     <p>Not happy? You have 28 days to return</p>
                                     <p>Click <Link className="here"><strong>here</strong></Link> for our full returns policy.</p>
                                 </div>
                             </div>
-                            <div className="delivery-cost">
+                            <div className="delivery-cost hide">
                                 <div className="standard">
                                     <div className="std-con">
                                         <div>
@@ -110,7 +110,7 @@ function SingleProduct() {
                                     </div>
                                 </div>
                             </div>
-                            <p className="view-all"><Link className="view-link">View all delivery options</Link></p>
+                            <p className="view-all hide"><Link className="view-link">View all delivery options</Link></p>
                         </div>
                     </div>
                 </div>
