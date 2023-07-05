@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -84,6 +85,24 @@ import img80 from "../components/images/DPDELIVERYPASS__xl.jpg";
 import pink from "../components/images/pink color.jpg";
 
 function Shop() {
+
+    const [product, setProduct] = useState([]);
+
+    const getProduct = (category) => {
+        fetch("http://159.65.21.42:9000/products")
+            .then((resp) => resp.json())
+            .then((output) => {
+                const getCategory = output.filter((result) => result.category === category);
+                setProduct(getCategory);
+                console.log(getCategory);
+            })
+            .catch((err) => console.log((err.message)))
+    };
+
+    useEffect(() => {
+        getProduct("DPDebby");
+    }, []);
+
     return (
         <div>
             <Navigation />
@@ -172,31 +191,31 @@ function Shop() {
                                 </ul>
                                 <ul>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Nightwear</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Trouser</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Shorts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Skirts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Swimwear</Link>
@@ -278,31 +297,31 @@ function Shop() {
                                 </ul>
                                 <ul>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Nightwear</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Trouser</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Shorts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Skirts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Swimwear</Link>
@@ -384,31 +403,31 @@ function Shop() {
                                 </ul>
                                 <ul>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Nightwear</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Trouser</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Shorts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Skirts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Swimwear</Link>
@@ -490,31 +509,31 @@ function Shop() {
                                 </ul>
                                 <ul>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Nightwear</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Trouser</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Shorts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Skirts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Swimwear</Link>
@@ -596,31 +615,31 @@ function Shop() {
                                 </ul>
                                 <ul>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Nightwear</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Trouser</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Shorts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Skirts</Link>
                                     </li>
                                     <li>
-                                    <Link>
+                                        <Link>
                                             <input type="checkbox" name="" id="big-box" />
                                         </Link>
                                         <Link>Swimwear</Link>
@@ -646,18 +665,23 @@ function Shop() {
                     </div>
                 </div>
                 <div className="products">
-                    <div className="product">
-                        <div className="image">
-                            <Link to="/product" className="link">
-                                <img src={img1} alt="" />
-                                <p>Petite V Neck Broderie Sleeve Top</p>
-                            </Link>
-                        </div>
-                        <div className="des">
-                            <p className="price">£12.00 (40% OFF) <span className="cross">£20.00</span></p>
-                            <p className="product-color"><img src={pink} alt="pink" /></p>
-                        </div>
-                    </div>
+                    {
+                        product && product.map((data) => (
+                            <div className="product" key={data._id}>
+                                <div className="image">
+                                    <Link to="/product" className="link">
+                                        <img src={data.image} alt="Product" />
+                                        <p>{data.name}</p>
+                                    </Link>
+                                </div>
+                                <div className="des">
+                                    <p>{data.description}</p>
+                                    <p className="price">£{data.price} (40% OFF) <span className="cross">£20.00</span></p>
+                                    <p className="product-color"><img src={pink} alt="pink" /></p>
+                                </div>
+                            </div>
+                        ))
+                    }
                     <div className="product">
                         <div className="image">
                             <img src={img2} alt="" />
