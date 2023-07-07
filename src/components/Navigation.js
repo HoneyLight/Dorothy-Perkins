@@ -12,10 +12,15 @@ import megamenu3 from "./images/DP_WK22_WEB_Nav_Imagery-DRESSES (2).jpg";
 import megamenu4 from "./images/DP_WK22_WEB_Nav_Imagery-SHOES (2).jpg";
 import megamenu5 from "./images/DP_WK22_WEB_Nav_Imagery-HOLIDAY-SHOP (2).jpg";
 import megamenu6 from "./images/DP-DROPDOWN-SALE-WK41 (2).jpg";
+import { useContext } from 'react';
+import { DPcontext } from '../contexts/DPcontext';
 // IoCloseOutline
 
 
 function Navigation() {
+
+    const props = useContext(DPcontext);
+    const {cart} = props;
 
     return (
         <header className='navigation'>
@@ -373,6 +378,7 @@ function Navigation() {
                         <li className='list'>
                             <Link to="/cart" className='nav-link'>
                                 <img src={img5} alt="" />
+                                <span className='cart_count'>{cart.length}</span>
                             </Link>
                         </li>
                     </ul>

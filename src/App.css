@@ -410,7 +410,12 @@ body {
   justify-content: space-between;
   margin-top: 20px;
 }
-
+.cart-container .image{
+  width: 100px;
+}
+.cart-container .image img{
+  width: 100%;
+}
 .cart-content {
   width: 48%;
 }
@@ -599,6 +604,12 @@ body {
   padding: 10px;
   background-color: black;
   color: white;
+}
+.no-item{
+  font-size: 20px;
+  font-weight: 550;
+  margin-top: 3rem;
+  text-align: center;
 }
 
 /* Signup */

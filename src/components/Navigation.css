@@ -73,6 +73,20 @@
 .logo img {
     width: 85px;
 }
+.cart_count{
+    width: 18px;
+    height: 18px;
+    border-radius: 46%;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    right: 18px;
+    top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* mega menu */
 .nav2-ul li:hover .mega-box {
@@ -157,6 +171,7 @@ input {
     position: absolute;
     top: 17px;
 }
+
 
 /* media responsiveness */
 @media(max-width: 1024px) {

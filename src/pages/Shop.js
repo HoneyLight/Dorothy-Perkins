@@ -666,10 +666,10 @@ function Shop() {
                 </div>
                 <div className="products">
                     {
-                        product && product.map((data) => (
-                            <div className="product" key={data._id}>
+                        product.map((data, i) => (
+                            <div className="product" >
                                 <div className="image">
-                                    <Link to="/product" className="link">
+                                    <Link to={`/shop/${data.category}/${data._id}`} className="link" key={i}>
                                         <img src={data.image} alt="Product" />
                                         <p>{data.name}</p>
                                     </Link>

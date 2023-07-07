@@ -1,3 +1,5 @@
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -13,8 +15,53 @@ import img8 from "../components/images/bqq12152_white_xl.jpg";
 import img9 from "../components/images/bqq12216_blue_xl.jpg";
 import img10 from "../components/images/bqq12231_green_xl.jpg";
 import pink from "../components/images/pink color.jpg";
+import { useContext } from "react";
+import DPProvider, { DPcontext } from "../contexts/DPcontext";
 
 function SingleProduct() {
+
+    const {id} = useParams();
+    const [product, setProduct] = useState({});
+
+    const contextData = useContext(DPcontext);
+    const {cart, setCart} = contextData; 
+
+    const {size, setSize}  = props;
+
+    const [title, setTitle] = useState("Select size");
+    const [status, setStatus] = useState(true);
+
+    
+
+    function handleCart(addCart) {
+        const existingCart = [...cart];
+        const checkCart = existingCart.find((item) => item._id === addCart._id);
+        if (checkCart) {
+            alert('Item already in Cart')
+            return;
+        }
+        const newKeys = {...addCart, quantity: 1, totalPrice: addCart.price};
+        existingCart.push(newKeys);
+        setCart(existingCart);
+
+        localStorage.setItem("DPDebby", JSON.stringify(existingCart))
+    }
+
+    
+
+    const getPrd = () => {
+        fetch(`http://159.65.21.42:9000/product/${id}`)
+        .then((resp) => resp.json())
+        .then((data) => {
+            setProduct(data);
+            console.log(data);
+        })
+    };
+
+    useEffect(() => {
+        getPrd();
+    }, []);
+
     return (
         <div>
             <Navigation />
@@ -22,20 +69,21 @@ function SingleProduct() {
                 <div className="single-product">
                     <div className="wears">
                         <div>
-                            <img src={img1} alt="" />
+                            <img src={product.image} alt="" />
                         </div>
-                        <div className="hide"><img src={img2} alt="" /></div>
-                        <div className="hide"><img src={img3} alt="" /></div>
+                        <div className="hide"><img src={product.image} alt="" /></div>
+                        <div className="hide"><img src={product.image} alt="" /></div>
                     </div>
                     <div className="product-des">
                         <div className="product-details">
                             <div className="free">
                                 <p className="red"><b>FREE STANDARD DELIVERY WHEN YOU SPEND £50!</b></p>
-                                <p className="brand"><Link className="brand-link">Home / </Link><Link className="brand-link">Clothing / </Link><Link className="brand-link">Women's Tops / </Link><Link className="brand-link">Blouses / </Link>Petite V Neck Broderie Sleeve Top</p>
+                                <p className="brand"><Link className="brand-link">Home / </Link><Link className="brand-link">Clothing / </Link><Link className="brand-link">Women's Tops / </Link><Link className="brand-link">Blouses / </Link>{product.name}</p>
                             </div>
                             <div className="details">
-                                <h4>Petite V Neck Broderie Sleeve Top</h4>
-                                <p className="red">£12.00 (40% OFF) <span className="cross">£20.00</span></p>
+                                <h4>{product.name}</h4>
+                                <p>{product.description}</p>
+                                <p className="red">{product.price} (40% OFF) <span className="cross">£20.00</span></p>
                                 <img className="prd-color" src={img5} alt="" />
                                 <div className="size">
                                     <div><button>XS</button></div>
@@ -46,7 +94,7 @@ function SingleProduct() {
                                 <p><Link className="size-link">Size guide</Link></p>
                             </div>
                             <div className="buy">
-                                <button>SELECT SIZE</button>
+                                <button onClick={() => handleCart(product)}>SELECT SIZE</button>
                             </div>
                             <div className="save">
                                 <div>
