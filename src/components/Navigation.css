@@ -95,9 +95,9 @@
     transition: all 0.3s ease;
 }
 
-.nav-link:hover {
+/* .nav-link:hover {
     border-bottom: 4px solid black;
-}
+} */
 
 .mega-box li a {
     text-decoration: none;

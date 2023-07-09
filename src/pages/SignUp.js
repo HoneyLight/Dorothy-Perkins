@@ -1,8 +1,44 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import img from "../components/images/DP_Track_my_order_1.jpg";
+import { useState } from "react";
 
 function SignUp() {
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [gender, setGender] = useState("");
+    const [conpassword, setConpassword] = useState("");
+    const [err, setErr] = useState(false);
+
+    const handleCreate = (e) => {
+        e.preventDefault();
+        if (name === "" || phone === "" || email === "" || password === "" || conpassword === "" || gender === "") {
+            setErr(true);
+            return;
+        }
+        let user = {
+            name: name,
+            phone: phone,
+            email: email,
+            password: password,
+        };
+
+        fetch("http://159.65.21.42:9000/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(user),
+        })
+            .then((resp) => resp.json())
+            .then((data) => {
+                alert("Registered successfully")
+                console.log(data);
+            })
+            .catch((err) => console.log(err));
+    }
+
+
     return (
         <div>
             <Navigation />
@@ -12,7 +48,7 @@ function SignUp() {
                     </div>
                     <div className="sign-right">
                         <div className="sign-form">
-                            <form>
+                            <form onSubmit={handleCreate}>
                                 <h3>Create Account</h3>
                                 <h6>
                                     Don't have an account? No worries, creating one is quick and
@@ -20,39 +56,43 @@ function SignUp() {
                                 </h6>
                                 <div>
                                     <label>Email address</label>
-                                    <input type="email" className="info" />
+                                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="info" />
+                                    {err && email === "" ? <span>Email Required</span> : null}
                                 </div>
                                 <div className="dp-check">
                                     <input type="checkbox" />
                                     <p>I confirm the email address is correct </p>
                                 </div>
                                 <div>
+                                    <label>Phone Number</label>
+                                    <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} className="info" />
+                                    {err && phone === "" ? <span>Phone Required</span> : null}
+                                </div>
+                                <div>
                                     <label>Password</label>
-                                    <div className="show">
-                                        <input type="text" />
-                                        <p>
+                                    <div className="">
+                                        <input type="text" className="info" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                        {/* <p>
                                             <u>Show</u>
-                                        </p>
+                                        </p> */}
+                                        {err && password === "" ? <span>Password Required</span> : null}
                                     </div>
                                 </div>
                                 <div>
                                     <label>Confirm</label>
-                                    <div className="show">
-                                        <input type="text" />
-                                        <p>
+                                    <div className="">
+                                        <input type="text" className="info" value={conpassword} onChange={(e) => setConpassword(e.target.value)}/>
+                                        {/* <p>
                                             <u>Show</u>
-                                        </p>
+                                        </p> */}
+                                    {err && conpassword === "" ? <span>Confirm Password Required</span> : null}
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label>First name </label>
-                                    <input type="text" className="info" />
-                                </div>
-
-                                <div>
-                                    <label>Last name </label>
-                                    <input type="text" className="info" />
+                                    <label>Name </label>
+                                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="info" />
+                                    {err && name === "" ? <span>Name Required</span> : null}
                                 </div>
                                 <div>
                                     <label>Date of birth </label>
@@ -65,24 +105,25 @@ function SignUp() {
                                         </select>
                                         <select name="" id="">
                                             <option value="">Month</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
+                                            <option value="">January</option>
+                                            <option value="">February</option>
                                         </select>
                                         <select name="" id="">
                                             <option value="">Year</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
+                                            <option value="">2000</option>
+                                            <option value="">2001</option>
                                         </select>
                                     </div>
                                     <p>You need to be 16 or over to have account with us</p>
                                 </div>
                                 <div className="select2">
                                     <label>Gender (optional)</label>
-                                    <select name="" id="">
+                                    <select name="" id="" value={gender} onChange={(e) => setGender(e.target.value)}>
                                         <option value="">Please select</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
                                     </select>
+                                    {err && gender === "" ? <span>Gender Required</span> : null}
                                 </div>
                                 <div className="check2">
                                     <p>I’d like to receive exclusive discounts and news from Dorothy Perkins by:</p>

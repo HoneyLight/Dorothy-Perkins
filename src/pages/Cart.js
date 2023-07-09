@@ -23,8 +23,9 @@ function Cart() {
         return a + b;
     }, 0);
  
-    function deletePrd(){
-        
+    const removePrd = (id) => {
+        // const cartdetails = cart.filter((item) => item._id !== id)
+        // setCart(cartdetails);
     }
 
     return (
@@ -57,7 +58,7 @@ function Cart() {
                                                     </div>
                                                     <div className="edit">
                                                         <Link className="edit-link"><b>Edit</b></Link>
-                                                        <Link className="del-link edit-link" onClick={() => deletePrd()}><b>Delete</b></Link>
+                                                        <Link className="del-link edit-link" onClick={() => removePrd(data._id)}><b>Remove</b></Link>
                                                         <p className="red">{data.price} <span className="cross">£20.00</span></p>
                                                     </div>
                                                 </div>

@@ -715,6 +715,11 @@ body {
   height: 30px;
   padding: 2px;
 }
+.sign-form span{
+    font-size: 13px;
+    color: red;
+  
+}
 
 .check2 p {
   font-size: 13px;

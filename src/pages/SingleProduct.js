@@ -26,7 +26,7 @@ function SingleProduct() {
     const contextData = useContext(DPcontext);
     const {cart, setCart} = contextData; 
 
-    const {size, setSize}  = props;
+    // const {size, setSize}  = props;
 
     const [title, setTitle] = useState("Select size");
     const [status, setStatus] = useState(true);
