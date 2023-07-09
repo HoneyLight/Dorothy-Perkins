@@ -67,12 +67,21 @@ function SingleProduct() {
             <Navigation />
             <div className="pages">
                 <div className="single-product">
+                    <div className="small-images">
+                        <div className="hide"><img src={product.image} alt="" /></div>
+                        <div className="hide"><img src={product.image} alt="" /></div>
+                        <div className="hide"><img src={product.image} alt="" /></div>
+                        <div className="hide"><img src={product.image} alt="" /></div>
+                        <div className="hide"><img src={product.image} alt="" /></div>
+                    </div>
                     <div className="wears">
                         <div>
                             <img src={product.image} alt="" />
                         </div>
-                        <div className="hide"><img src={product.image} alt="" /></div>
-                        <div className="hide"><img src={product.image} alt="" /></div>
+                        <div>
+                            <img src={product.image} alt="" />
+                        </div>
+
                     </div>
                     <div className="product-des">
                         <div className="product-details">
@@ -115,7 +124,7 @@ function SingleProduct() {
                             <div className="styles">
                                 <p className="cami">Cami or blouse? Shirt or bodysuit? Whatever you're after, our women's tops have you covered for every event in the social calendar. From casual fits to elevated styles for special occasions, we make it easy to nail the 'jeans and a nice top' look. Think puff sleeves, pretty prints, wrap silhouettes and so much more.</p>
                                 <ul className="desc">
-                                    <li>Style: Petite V Neck Broderie Sleeve Top.</li>
+                                    <li>Style: {product.description}.</li>
                                     <li>Ideal for: Daywear.</li>
                                     <li>Design: Embroidered.</li>
                                     <li>Model wears size UK 10 and is 5' 3" tall.</li>

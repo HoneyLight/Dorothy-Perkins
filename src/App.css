@@ -100,28 +100,157 @@ body {
   font-size: 23px;
   letter-spacing: 2px;
 }
+.shop-container, .filter{
+  display: flex;
+  width: 85%;
+  margin: 10px auto;
+  /* justify-content: space-around; */
+}
+.filter{
+  justify-content: space-between;
+}
+/* accordion */
+.shop-varieties{
+ width: 20%;
+}
+.accordion-container a{
+  text-decoration: none;
+  color: rgb(30, 30, 30);
+}
+.accordion-tab label,
+.accordion-tab2 label,
+.accordion-tab3 label,
+.accordion-tab4 label,
+.accordion-tab5 label,
+.accordion-tab6 label,
+.accordion-tab7 label {
+  /* background-color: rgb(232, 232, 232); */
+  display: block;
+  line-height: 2;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-tab label::after,
+.accordion-tab2 label::after,
+.accordion-tab3 label::after,
+.accordion-tab4 label::after,
+.accordion-tab5 label::after,
+.accordion-tab6 label::after,
+.accordion-tab7 label::after{
+  content: '↑⋏';
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: large;
+}
+
+.accordion-tab input:checked~label::after,
+.accordion-tab2 input:checked~label::after,
+.accordion-tab3 input:checked~label::after,
+.accordion-tab4 input:checked~label::after,
+.accordion-tab5 input:checked~label::after,
+.accordion-tab6 input:checked~label::after,
+.accordion-tab7 input:checked~label::after {
+  content: '↓⋎';
+}
+
+.accordion-tab #accordion-1,
+.accordion-tab2 #accordion-2,
+.accordion-tab3 #accordion-3,
+.accordion-tab4 #accordion-4,
+.accordion-tab5 #accordion-5,
+.accordion-tab6 #accordion-6,
+.accordion-tab7 #accordion-7
+ {
+  display: none;
+}
+
+.aaa {
+  display: flex;
+  gap: 6px;
+}
+
+.accordion-tab>.accordion-content,
+.accordion-tab2>.accordion-content2,
+.accordion-tab3>.accordion-content3,
+.accordion-tab4>.accordion-content4 
+.accordion-tab5>.accordion-content5 
+.accordion-tab6>.accordion-content6 
+.accordion-tab7>.accordion-content7
+{
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  background: white;
+  position: relative;
+  top: -10px;
+  z-index: -1;
+  border: 1px solid rgba(216, 216, 216, 0.204);
+}
+
+.block {
+  width: 100%;
+  display: block;
+}
+
+.accordion-content li,
+.accordion-content2 li,
+.accordion-content3 li,
+.accordion-content4 li,
+.accordion-content5 li,
+.accordion-content6 li,
+.accordion-content7 li {
+  padding: 10px;
+  list-style: none;
+}
+
+.accordion-tab input:checked~.accordion-content,
+.accordion-tab2 input:checked~.accordion-content2,
+.accordion-tab3 input:checked~.accordion-content3,
+.accordion-tab4 input:checked~.accordion-content4,
+.accordion-tab5 input:checked~.accordion-content5,
+.accordion-tab6 input:checked~.accordion-content6,
+.accordion-tab7 input:checked~.accordion-content7 {
+  max-height: 100vh;
+  box-shadow: 5px 5px 10px whitesmoke;
+}
+
+.shop-view {
+  display: flex;
+  gap: 5px;
+}
+
+.shop-view button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.shop-view .active {
+  background-color: black;
+  color: white;
+}
+
 
 .products {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   padding: 0 18px;
-  margin-top: 30px;
 }
-
-.product {
-  text-align: center;
+.product{
+  /* height: 520px; */
 }
-
 .product .image {
   width: 97%;
-  height: 450px;
   margin: 0 auto;
 }
 
 .product .image img {
   width: 100%;
-  height: 93%;
 }
 
 .product .image .link {
@@ -130,13 +259,14 @@ body {
 }
 
 .product .image p {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 550;
   margin-top: 10px;
 }
 
 .product .des {
-  line-height: 4;
+  line-height: 2;
+  font-size: 12.5px;
 }
 
 .product .price {
@@ -179,27 +309,34 @@ body {
 }
 
 .single-product {
-  margin-top: 10px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
-
+.single-product .small-images{
+  width: 10%;
+  margin-left: 20px;
+}
+.single-product .small-images img{
+  width: 80%;
+  margin-bottom: 20px;
+}
+.single-product .small-images img:hover{
+border: 1px solid black;
+cursor: pointer;
+}
 .single-product .wears {
-  width: 68%;
-  /* display: flex;
-  justify-content: space-between; */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  width: 40%;
   padding-left: 10px;
 }
 
 .wears img {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .single-product .product-des {
-  width: 50%;
+  width: 40%;
   text-align: center;
 }
 
@@ -423,6 +560,7 @@ body {
 .cart-con {
   display: flex;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .cart-con .cart-desc {
@@ -471,6 +609,16 @@ body {
 .edit-link:hover {
   text-decoration: none;
   color: rgb(37, 36, 36);
+}
+.edits{
+  display: flex;
+  gap: 10px;
+}
+.edits button{
+  padding: 1px 5px;
+  background-color: rgb(247, 247, 247);
+  font-size: 20px;
+  border: none;
 }
 
 .cart-content_rtn {
@@ -652,7 +800,6 @@ body {
 }
 
 .sign-img img {
-  /* height: 100%; */
   width: 100%;
 }
 
@@ -660,15 +807,12 @@ body {
   display: block;
   outline: none;
   margin: 10px 0;
-  /* width: 100%; */
-  /* height: 15px;
-  padding: 10px; */
+ 
 }
 
 .dp-check {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
 }
 
 .dp-check p {
@@ -758,102 +902,6 @@ body {
 .log-img img{
   height: 100%;
   width: 100%;
-}
-
-/* accordion */
-/* .shop-varieties{
-  display: flex;
-  justify-content: space-between;
-} */
-.accordion-container {
-  /* width: 60%;
-  display: flex; */
-}
-
-.accordion-tab label,
-.accordion-tab2 label {
-  /* width: 50%; */
-  background-color: rgb(232, 232, 232);
-  display: block;
-  padding: 15px;
-  cursor: pointer;
-  /* margin: 2px 0; */
-  position: relative;
-}
-
-.accordion-tab label::after,
-.accordion-tab2 label::after {
-  content: '↑';
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  font-size: large;
-}
-
-.accordion-tab input:checked~label::after,
-.accordion-tab2 input:checked~label::after {
-  content: '↓';
-}
-
-.accordion-tab #accordion-1,
-.accordion-tab2 #accordion-2 {
-
-  display: none;
-}
-
-.aaa {
-  display: flex;
-  gap: 6px;
-}
-
-.accordion-tab>.accordion-content,
-.accordion-tab2>.accordion-content2 {
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.5s;
-  background: white;
-  position: relative;
-  top: -10px;
-  z-index: -1;
-  border: 1px solid rgba(128, 128, 128, 0.204);
-}
-
-.accordion-content,
-.accordion-content2 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 35px;
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
-}
-
-.accordion-content li,
-.accordion-content2 li {
-  padding: 10px;
-  list-style: none;
-}
-
-.accordion-tab input:checked~.accordion-content,
-.accordion-tab2 input:checked~.accordion-content2 {
-  max-height: 100vh;
-  box-shadow: 5px 5px 10px whitesmoke;
-}
-
-.shop-view {
-  display: flex;
-  gap: 5px;
-}
-
-.shop-view button {
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.shop-view .active {
-  background-color: black;
-  color: white;
 }
 
 

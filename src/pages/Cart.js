@@ -19,14 +19,51 @@ function Cart() {
     const contextData = useContext(DPcontext);
     const { cart, setCart } = contextData;
 
+    
+    const removePrd = (id) => {
+        let initialCart = [...cart];
+        let cartdetails = initialCart.filter((cartItem) => {
+            return cartItem._id !== id._id;
+            // for the above return, we passed the id of the contents in cart already hence we wont need to call that 'data._id' on the remove or delete button again eather we will just call 'data'.
+        })
+        setCart(cartdetails);
+        console.log(cartdetails)
+        localStorage.setItem("DPDebby", JSON.stringify(cartdetails));
+    }
+    
+    const increasePrd = (cartContent) => {
+        const existingCart = [...cart]
+        const increaseQty = existingCart.map((items) => {
+            if(items._id === cartContent._id) {
+                cartContent.quantity += 1;
+                cartContent.totalPrice = cartContent.price * cartContent.quantity;
+            }
+            return items;
+        })
+        setCart(increaseQty);
+        localStorage.setItem('DPDebby', JSON.stringify(increaseQty));
+    }
+
+    const decreasePrd = (cartContent) => {
+        const existingCart = [...cart];
+        const decreaseQty = existingCart.map((items) => {
+            if(items.id === cartContent.id) {
+                if (cartContent.quantity > 1) {
+                    cartContent.quantity -= 1;
+                    cartContent.totalPrice = cartContent.price * cartContent.quantity;
+                }
+            }
+            return items;
+        });
+        setCart(decreaseQty);
+        console.log(decreaseQty)
+        localStorage.setItem('DPDebby', JSON.stringify(decreaseQty));
+    }
+
     const prdTotal = cart.map((item) => item.totalPrice).reduce((a, b) => {
         return a + b;
     }, 0);
- 
-    const removePrd = (id) => {
-        // const cartdetails = cart.filter((item) => item._id !== id)
-        // setCart(cartdetails);
-    }
+
 
     return (
         <div>
@@ -57,8 +94,12 @@ function Cart() {
                                                         <p className="stock">In stock</p>
                                                     </div>
                                                     <div className="edit">
-                                                        <Link className="edit-link"><b>Edit</b></Link>
-                                                        <Link className="del-link edit-link" onClick={() => removePrd(data._id)}><b>Remove</b></Link>
+                                                        {/* <Link className="edit-link"><b>Edit</b></Link> */}
+                                                        <div className="edits">
+                                                            <button onClick={() => decreasePrd(data)}>-</button>
+                                                            <button onClick={() => increasePrd(data)}>+</button>
+                                                        </div>
+                                                        <Link className="del-link edit-link" onClick={() => removePrd(data)}><b>Remove</b></Link>
                                                         <p className="red">{data.price} <span className="cross">£20.00</span></p>
                                                     </div>
                                                 </div>
