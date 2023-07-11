@@ -47,7 +47,7 @@ function Cart() {
     const decreasePrd = (cartContent) => {
         const existingCart = [...cart];
         const decreaseQty = existingCart.map((items) => {
-            if(items.id === cartContent.id) {
+            if(items._id === cartContent._id) {
                 if (cartContent.quantity > 1) {
                     cartContent.quantity -= 1;
                     cartContent.totalPrice = cartContent.price * cartContent.quantity;
@@ -100,7 +100,7 @@ function Cart() {
                                                             <button onClick={() => increasePrd(data)}>+</button>
                                                         </div>
                                                         <Link className="del-link edit-link" onClick={() => removePrd(data)}><b>Remove</b></Link>
-                                                        <p className="red">{data.price} <span className="cross">£20.00</span></p>
+                                                        <p className="red">£{data.price} <span className="cross">£20.00</span></p>
                                                     </div>
                                                 </div>
                                             </div>

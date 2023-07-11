@@ -4,9 +4,6 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { IoReloadOutline, IoCalendarOutline } from "react-icons/io5";
-import img1 from "../components/images/womens-pink-petite-v-neck-broderie-sleeve-top.webp";
-import img2 from "../components/images/pink-petite-v-neck-broderie-sleeve-top.webp";
-import img3 from "../components/images/pink-petite-v-neck-broderie-sleeve-top (1).webp";
 import img4 from "../components/images/DP_UNLIMITED_APP_PINK_6.jpg";
 import img5 from "../components/images/pink color.jpg";
 import img6 from "../components/images/DPDELIVERYPASS__xl.jpg";
@@ -26,13 +23,19 @@ function SingleProduct() {
     const contextData = useContext(DPcontext);
     const {cart, setCart} = contextData; 
 
-    // const {size, setSize}  = props;
-
-    const [title, setTitle] = useState("Select size");
-    const [status, setStatus] = useState(true);
-
+    const [title, setTitle] = useState("SELECT SIZE");
+    const [color, setColor] = useState('')
     
+    const [status, setStatus] = useState(true);
+    const [qty, setQty] = useState("");
 
+    const handleChange = (selectedQty) => {
+        setQty(selectedQty);
+        setTitle("ADD TO BAG");
+        setColor("black");
+        setStatus(false);
+      };
+    
     function handleCart(addCart) {
         const existingCart = [...cart];
         const checkCart = existingCart.find((item) => item._id === addCart._id);
@@ -95,15 +98,15 @@ function SingleProduct() {
                                 <p className="red">{product.price} (40% OFF) <span className="cross">£20.00</span></p>
                                 <img className="prd-color" src={img5} alt="" />
                                 <div className="size">
-                                    <div><button>XS</button></div>
-                                    <div><button>S</button></div>
-                                    <div><button>M</button></div>
-                                    <div><button>L</button></div>
+                                    <div><button onClick={() => handleChange("XS")}>XS</button></div>
+                                    <div><button onClick={() => handleChange("S")}>S</button></div>
+                                    <div><button onClick={() => handleChange("M")}>M</button></div>
+                                    <div><button onClick={() => handleChange("L")}>L</button></div>
                                 </div>
                                 <p><Link className="size-link">Size guide</Link></p>
                             </div>
                             <div className="buy">
-                                <button onClick={() => handleCart(product)}>SELECT SIZE</button>
+                                <button  onClick={() => handleCart(product)} disabled={status} style={{background: color}}>{title}</button>
                             </div>
                             <div className="save">
                                 <div>
